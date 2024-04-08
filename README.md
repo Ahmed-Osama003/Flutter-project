@@ -2,15 +2,36 @@
 
 A new Flutter project.
 
-## Getting Started
+# Flutter Authentication Form with OTP (One-Time Password)
 
-This project is a starting point for a Flutter application.
+This Flutter application provides a complete authentication system with OTP-based signup, login, and password recovery. Users can register using their email or phone number, receive an OTP for verification, and securely authenticate into the app.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Sign up with email or phone number and receive an OTP for verification.
+- Login with email or phone number using OTP-based authentication.
+- Forgot password functionality with OTP verification for password recovery.
+- Input validation for email and phone number fields.
+- Error handling for invalid input and authentication failures.
+- Secure storage of sensitive user information.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Requirements
+
+- Flutter SDK: Install Flutter from the official Flutter website (https://flutter.dev).
+- Dart SDK: Flutter requires the Dart programming language. Dart SDK is included with the Flutter SDK.
+- Android Studio / Visual Studio Code: Choose your preferred IDE for Flutter development.
+
+
+
+
+## Screenshots
+
+![Signup Screen](![Signup Screen](screenshots/signup_screen.png)
+![Login Screen](screenshots/login_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png))
+![Login Screen](screenshots/login_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
