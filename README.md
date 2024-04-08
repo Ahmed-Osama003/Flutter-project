@@ -26,7 +26,11 @@ This Flutter application provides a complete authentication system with OTP-base
 
 ## Screenshots
 
-![Signup Screen](![Signup Screen](screenshots/signup_screen.png)
+![logIn](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/efa427f2-8927-4675-ad8d-5e68c042fa0c)
+![Login Screen](screenshots/login_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
+![Forgot Password Screen](screenshots/forgot_password_screen.png)
 ![Login Screen](screenshots/login_screen.png)
 ![Forgot Password Screen](screenshots/forgot_password_screen.png)
 ![Forgot Password Screen](screenshots/forgot_password_screen.png)
