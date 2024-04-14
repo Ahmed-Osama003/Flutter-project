@@ -1,7 +1,7 @@
 class myValidation{
 
   String? validateName(String? name){
-    if (name == null ) {
+    if (name == null) {
       return "Not match";
     }
     RegExp regex = RegExp(r'^[a-zA-Z]+([ -][a-zA-Z]+)*$');

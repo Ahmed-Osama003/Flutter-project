@@ -1,21 +1,18 @@
+import 'package:ecommerceapp/core/utils/myRoutes.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceapp/features/auth/login/pages/LoginPage.dart';
-void main() {
-  runApp(const MyApp());
+import 'package:shared_preferences/shared_preferences.dart';
+
+
+
+
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences sh = await SharedPreferences.getInstance();
+  bool firstTime = sh.getBool('onboarding')??false;
+  MaterialApp materialApp = MaterialApp(
+    onGenerateRoute: myRoutes.onGenerateRoute,
+    onGenerateInitialRoutes: (_) => firstTime ? myRoutes.initRoutes2 : myRoutes.initRoutes1,
+  );
+  runApp(materialApp);
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: "E-Commerce Shopping",
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primaryColor: Color(0xFFEF6969),
-      ),
-      home: LoginPage(),
-    );
-  }
-}
