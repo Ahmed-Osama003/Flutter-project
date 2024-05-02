@@ -1,7 +1,11 @@
 class myValidation{
 
   String? validateName(String? name){
+<<<<<<< HEAD
     if (name == null) {
+=======
+    if (name == null ) {
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
       return "Not match";
     }
     RegExp regex = RegExp(r'^[a-zA-Z]+([ -][a-zA-Z]+)*$');
@@ -49,6 +53,7 @@ class myValidation{
     }
   }
 
+<<<<<<< HEAD
   String? validateResetCode(String? code) {
     if (code == null) {
       return "Not match";
@@ -60,5 +65,8 @@ class myValidation{
       return "Not match";
     }
   }
+=======
+
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
 
 }

@@ -20,9 +20,12 @@ pluginManagement {
 plugins {
     id "dev.flutter.flutter-plugin-loader" version "1.0.0"
     id "com.android.application" version "7.3.0" apply false
+<<<<<<< HEAD
     // START: FlutterFire Configuration
     id "com.google.gms.google-services" version "4.3.15" apply false
     // END: FlutterFire Configuration
+=======
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
     id "org.jetbrains.kotlin.android" version "1.7.10" apply false
 }
 

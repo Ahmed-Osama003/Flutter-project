@@ -151,4 +151,8 @@ InputDecoration decoration = InputDecoration(
     borderRadius: BorderRadius.circular(30),
   ),
   prefixIcon: Icon(Icons.person),
+<<<<<<< HEAD
 );
+=======
+);
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03

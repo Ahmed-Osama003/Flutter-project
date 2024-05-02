@@ -1,7 +1,10 @@
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/features/auth/register/pages/SignUpPage.dart';
+<<<<<<< HEAD
 import 'package:ecommerceapp/features/auth/forget/pages/ForgetPasswordPage.dart';
+=======
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 
@@ -42,6 +45,7 @@ class LoginPage extends StatelessWidget {
                     ),
                     Align(
                         alignment: Alignment.bottomRight,
+<<<<<<< HEAD
                         child: TextButton(onPressed: (){
                           Navigator.push(
                               context,
@@ -50,6 +54,9 @@ class LoginPage extends StatelessWidget {
                               )
                           );
                         }, child: const Text("Forgot Password", style:TextStyle(
+=======
+                        child: TextButton(onPressed: (){}, child: const Text("Forgot Password", style:TextStyle(
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
                           color: Color(0xFFEF6969),
                           fontSize: 16,
                           fontWeight: FontWeight.w600,
@@ -91,7 +98,11 @@ class LoginPage extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
+<<<<<<< HEAD
                                 builder: (context) => const SignUpPage(),
+=======
+                                builder: (context) => SignUpPage(),
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
                               )
                           );
                         }, child: Text("Sign Up", style:TextStyle(

@@ -1,8 +1,11 @@
 plugins {
     id "com.android.application"
+<<<<<<< HEAD
     // START: FlutterFire Configuration
     id 'com.google.gms.google-services'
     // END: FlutterFire Configuration
+=======
+>>>>>>> 131c7cf2059cc85149fc6f34dd2d3cd9fee7ec03
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
 }
