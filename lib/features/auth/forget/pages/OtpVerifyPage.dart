@@ -1,5 +1,4 @@
 import 'package:ecommerceapp/features/auth/forget/pages/RecoveryPasswordPage.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sms_otp_auto_verify/sms_otp_auto_verify.dart';
 class OtpVerifyPage extends StatefulWidget {

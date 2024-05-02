@@ -42,8 +42,7 @@ class otpPageBody extends StatelessWidget {
                   controller: controller.otpPageEmailController,
                   autovalidateMode: AutovalidateMode.onUserInteraction,
                   keyboardType: TextInputType.number,
-                  validator: myValidation().validateResetCode,
-                  inputFormatters: [FilteringTextInputFormatter.allow(RegExp(r'^[0-9]+$'))],
+                  validator: myValidation().validateNumber,
                   decoration: InputDecoration(
                     labelText: "Enter Number",
                     border: OutlineInputBorder(

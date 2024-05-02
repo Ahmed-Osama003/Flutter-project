@@ -1,11 +1,8 @@
 import 'package:ecommerceapp/features/auth/forget/pages/OtpPage.dart';
 import 'package:ecommerceapp/features/auth/forget/pages/RecoveryPasswordPage.dart';
-import 'package:ecommerceapp/features/auth/register/pages/SignUpPage.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:ecommerceapp/features/auth/login/pages/LoginPage.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/core/utils/myValidation.dart';
-import 'package:flutter/widgets.dart';
 class ForgetPasswordPage extends StatefulWidget {
   const ForgetPasswordPage({super.key});
 

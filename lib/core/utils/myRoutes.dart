@@ -1,8 +1,8 @@
 import 'package:ecommerceapp/features/auth/forget/view/pages/ForgetPasswordPage.dart';
-import 'package:ecommerceapp/features/auth/forget/view/pages/OtpVerifyPage.dart';
 import 'package:ecommerceapp/features/auth/forget/view/pages/RecoveryPasswordPage.dart';
 import 'package:ecommerceapp/features/auth/login/view/pages/LoginPage.dart';
 import 'package:ecommerceapp/features/auth/splash/view/pages/SplashPage.dart';
+import 'package:ecommerceapp/features/auth/verification/view/pages/otpVerificationPage.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/forget/view/pages/OtpPage.dart';
 import '../../features/auth/onBoarding/view/pages/onBoarding_Page.dart';
@@ -14,7 +14,7 @@ class myRoutes{
     MaterialPageRoute<dynamic>(builder: (BuildContext context) => onBoardingPage()),
   ];
   static List<Route> initRoutes2 = [
-    MaterialPageRoute<dynamic>(builder: (BuildContext context) => SignUpPage()),
+    MaterialPageRoute<dynamic>(builder: (BuildContext context) => SplashPage()),
   ];
 
   static Route<dynamic> onGenerateRoute(RouteSettings setting){
@@ -33,7 +33,7 @@ class myRoutes{
       case 'otppage':
         return MaterialPageRoute<dynamic>(builder: (BuildContext context) => OtpPage());
       case 'otpverify':
-        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => OtpVerifyPage());
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => otpVerificationPage());
       case 'recoverypassword':
         return MaterialPageRoute<dynamic>(builder: (BuildContext context) => RecoveryPasswordPage());
 
