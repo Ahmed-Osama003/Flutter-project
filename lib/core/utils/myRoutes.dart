@@ -1,12 +1,16 @@
 import 'package:ecommerceapp/features/auth/forget/view/pages/ForgetPasswordPage.dart';
-import 'package:ecommerceapp/features/auth/forget/view/pages/OtpVerifyPage.dart';
 import 'package:ecommerceapp/features/auth/forget/view/pages/RecoveryPasswordPage.dart';
 import 'package:ecommerceapp/features/auth/login/view/pages/LoginPage.dart';
 import 'package:ecommerceapp/features/auth/splash/view/pages/SplashPage.dart';
+import 'package:ecommerceapp/features/auth/verification/view/pages/otpVerificationPage.dart';
+import 'package:ecommerceapp/features/dashboard/modules/cart/view/pages/dashboardCart.dart';
+import 'package:ecommerceapp/features/dashboard/modules/home/view/pages/dashboardHome.dart';
+import 'package:ecommerceapp/features/dashboard/modules/product/view/pages/dashboardProduct.dart';
 import 'package:flutter/material.dart';
 import '../../features/auth/forget/view/pages/OtpPage.dart';
 import '../../features/auth/onBoarding/view/pages/onBoarding_Page.dart';
 import '../../features/auth/register/view/pages/SignUpPage.dart';
+import '../../features/dashboard/view/pages/dashboard.dart';
 
 
 class myRoutes{
@@ -14,7 +18,7 @@ class myRoutes{
     MaterialPageRoute<dynamic>(builder: (BuildContext context) => onBoardingPage()),
   ];
   static List<Route> initRoutes2 = [
-    MaterialPageRoute<dynamic>(builder: (BuildContext context) => SignUpPage()),
+    MaterialPageRoute<dynamic>(builder: (BuildContext context) => SplashPage()),
   ];
 
   static Route<dynamic> onGenerateRoute(RouteSettings setting){
@@ -33,10 +37,17 @@ class myRoutes{
       case 'otppage':
         return MaterialPageRoute<dynamic>(builder: (BuildContext context) => OtpPage());
       case 'otpverify':
-        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => OtpVerifyPage());
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => otpVerificationPage());
       case 'recoverypassword':
         return MaterialPageRoute<dynamic>(builder: (BuildContext context) => RecoveryPasswordPage());
-
+      case 'dashboard':
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => dashboard());
+      case 'dashboardhome':
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => dashboardHome());
+      case 'dashboardproduct':
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => dashboardProduct());
+      case 'dashboardcart':
+        return MaterialPageRoute<dynamic>(builder: (BuildContext context) => dashboardCart());
       default:
         return MaterialPageRoute<dynamic>(builder: (BuildContext context) => onBoardingPage());
     }

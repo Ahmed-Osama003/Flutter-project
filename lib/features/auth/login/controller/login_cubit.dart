@@ -17,7 +17,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   void onPressedLogin(BuildContext context){
     if(formKey.currentState!.validate()){
-      Navigator.pushNamed(context, 'login');
+      Navigator.pushNamed(context, 'dashboard');
     }
     else {
       log('invalid input');

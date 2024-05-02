@@ -13,11 +13,11 @@ class OnBoardingControllerCubit extends Cubit<OnBoardingControllerState> {
   PageController pageController = PageController();
 
   void onChangeToNext(){
-    pageController.nextPage(duration: Duration(milliseconds: 400), curve: Curves.bounceIn);
+    pageController.nextPage(duration: Duration(milliseconds: 400), curve: Curves.linear);
   }
 
   void onChangeToBack(){
-    pageController.previousPage(duration: Duration(milliseconds: 400), curve: Curves.bounceIn);
+    pageController.previousPage(duration: Duration(milliseconds: 400), curve: Curves.linear);
   }
 
   List data = [
