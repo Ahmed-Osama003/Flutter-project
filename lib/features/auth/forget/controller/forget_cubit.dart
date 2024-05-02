@@ -36,7 +36,7 @@ class ForgetCubit extends Cubit<ForgetState> {
   //otp page
   void onPressedVerifyUsingNumber(BuildContext context) {
     if (formKey.currentState!.validate()) {
-      Navigator.pushNamed(context, 'recoverypassword');
+      Navigator.pushNamed(context, 'otpverify');
     }
     else {
       log('invalid input');
@@ -45,7 +45,12 @@ class ForgetCubit extends Cubit<ForgetState> {
 
   //recovery password page
   void onPressedResetPassword(BuildContext context) {
-    onPressedVerifyUsingNumber(context);
+    if (formKey.currentState!.validate()) {
+      Navigator.pushNamed(context, 'recoverypassword');
+    }
+    else {
+      log('invalid input');
+    }
   }
 
 }
