@@ -75,11 +75,17 @@ class cartItemWidgetAll extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Icon(
-                          CupertinoIcons.minus,
-                          color: Colors.green,
+                        IconButton(
+                          onPressed: () {
+                            // Add your minus button functionality here
+                          },
+                          iconSize: 20,
+                          icon: Icon(
+                            CupertinoIcons.minus,
+                            color: Colors.green,
+                          ),
                         ),
-                        SizedBox(width: 20),
+                        SizedBox(width: 0),
                         Text(
                           "1",
                           style: TextStyle(
@@ -88,8 +94,16 @@ class cartItemWidgetAll extends StatelessWidget {
                           ),
                         ),
                         SizedBox(width: 5),
-                        Icon(CupertinoIcons.plus, color: Color(0xFFDB3022)),
-                      ],
+                        IconButton(
+                          onPressed: () {
+                            // Add your plus button functionality here
+                          },
+                          iconSize: 25,
+                          icon: Icon(
+                            CupertinoIcons.plus,
+                            color: Color(0xFFDB3022),
+                          ),
+                        ),                      ],
                     ),
                   ],
                 ),

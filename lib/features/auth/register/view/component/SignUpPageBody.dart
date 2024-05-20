@@ -1,5 +1,6 @@
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 import 'package:ecommerceapp/features/auth/register/view/component/SignUpPageElevatedButton.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -21,7 +22,9 @@ class SignUpPageBody extends StatelessWidget {
       value: controller,
       child: BlocBuilder<RegisterCubit, RegisterState>(
         builder: (context, state) {
-          return Form(
+          return state is RegisterStateLoading ?Center(child: CircularProgressIndicator()):
+          // state is RegisterStateEmpty?Center(child:Icon(CupertinoIcons.delete)):
+          Form(
             key: controller.formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -106,6 +109,7 @@ class SignUpPageBody extends StatelessWidget {
                             fontSize: 15,
                           )),
                           TextButton(onPressed: () {
+
                             Navigator.pushNamed(context, 'login');
                           }, child: Text("Log In", style: TextStyle(
                             color: Color(0xFFEF6969),

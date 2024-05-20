@@ -1,5 +1,8 @@
 import 'package:ecommerceapp/core/context_extension.dart';
+import 'package:ecommerceapp/features/dashboard/modules/product/controller/products_cubit.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'containerButtonModel.dart';
 class productDetailsPopup extends StatelessWidget {
@@ -18,7 +21,12 @@ class productDetailsPopup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return BlocProvider<ProductsCubit>(
+  create: (context) => ProductsCubit(),
+  child: BlocBuilder<ProductsCubit, ProductsState>(
+  builder: (context, state) {
+    final ProductsCubit controller = context.read<ProductsCubit>();
+    return state is ProductsStateLoaded ?Center(child: CircularProgressIndicator()):InkWell(
       onTap: (){
         showModalBottomSheet(
           backgroundColor: Colors.transparent,
@@ -45,7 +53,7 @@ class productDetailsPopup extends StatelessWidget {
                         children: [
                           Text("Size: ", style: iStyle),
                           SizedBox(height: 20),
-                          Text("Color: ", style: iStyle),
+                          Text("AColors: ", style: iStyle),
                           SizedBox(height: 20),
                           Text("Total: ", style: iStyle),
                           SizedBox(height: 20),
@@ -89,24 +97,46 @@ class productDetailsPopup extends StatelessWidget {
                           SizedBox(height: 20),
                           Row(
                             children: [
-                              SizedBox(width: 10),
-                              Text("-", style: iStyle),
-                              SizedBox(width: 10),
-                              Text("1", style: iStyle),
-                              SizedBox(width: 10),
-                              Text("+", style: iStyle),
-                              SizedBox(width: 30),
+                              IconButton(
+                                onPressed: () {
+                                  controller.decreaseCounter();
+                                },
+                                iconSize: 25,
+                                icon: Icon(
+                                  CupertinoIcons.minus,
+                                  color: Colors.green,
+                                ),
+                              ),
+                              SizedBox(width: 0),
+                              Text(
+                                controller.counter.toString(),
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(width: 5),
+                              IconButton(
+                                onPressed: () {
+                                  controller.increaseCounter();
+                                },
+                                iconSize: 25,
+                                icon: Icon(
+                                  CupertinoIcons.plus,
+                                  color: Color(0xFFDB3022),
+                                ),
+                              ),
                             ],
                           ),
                         ],
                       ),
                     ],
                   ),
-                  SizedBox(height: 30),
+                  SizedBox(height: 20),
                   Row(children: [
                     Text("Total Payments", style: iStyle),
                     SizedBox(width: 10),
-                    Text("\$300.00",style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
+                    Text(controller.x.toString(),style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
 
                   ]),
                   SizedBox(height: 20),
@@ -132,5 +162,8 @@ class productDetailsPopup extends StatelessWidget {
         bgColor: Color(0xFFDB3022),
       ),
     );
+  },
+),
+);
   }
 }

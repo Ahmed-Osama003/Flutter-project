@@ -27,7 +27,7 @@ class dashboard extends StatelessWidget {
           dashboardProduct(),
           dashboardCart(),
           dashboardFavorite(),
-          dashboardProfile(),
+          // dashboardProfile(),
         ],
       ),
       // floatingActionButton: SafeArea(
@@ -49,7 +49,7 @@ class dashboard extends StatelessWidget {
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.collections), label: "BestSeller"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart), label: "Cart"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Fav"),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
+          // BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
         ],
       ),
     );

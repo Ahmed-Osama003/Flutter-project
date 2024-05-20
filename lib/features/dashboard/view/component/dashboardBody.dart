@@ -19,7 +19,7 @@ class _dashboardState extends State<dashboardBody> {
     dashboardHome(),
     dashboardCart(),
     dashboardFavorite(),
-    dashboardProfile(),
+    // dashboardProfile(),
   ];
   @override
   Widget build(BuildContext context) {

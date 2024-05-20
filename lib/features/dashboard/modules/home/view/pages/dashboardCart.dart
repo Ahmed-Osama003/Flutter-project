@@ -39,9 +39,9 @@ class dashboardCart extends StatelessWidget {
               centerTitle: true,
             ),
             body:
-            state is HomeStateLoading ?CircularProgressIndicator():
-            state is HomeStateEmpty?Icon(CupertinoIcons.delete):
-                controller.cartData.isEmpty?Icon(CupertinoIcons.delete):
+            state is HomeStateLoading ?Center(child: CircularProgressIndicator()):
+            state is HomeStateEmpty?Center(child:Icon(CupertinoIcons.delete)):
+                controller.cartData.isEmpty?Center(child:Icon(CupertinoIcons.delete)):
             SingleChildScrollView(
               child: Padding(
                 padding: EdgeInsets.all(15),

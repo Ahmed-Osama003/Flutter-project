@@ -24,9 +24,9 @@ class dashboardHome extends StatelessWidget {
   builder: (context, state) {
     final HomeCubit controller = context.read<HomeCubit>();
     return Scaffold(
-      body: state is HomeStateLoading ?CircularProgressIndicator():
-      state is HomeStateEmpty?Icon(CupertinoIcons.delete):
-      SingleChildScrollView(
+      // body: state is HomeStateLoading ?Center(child: CircularProgressIndicator()):
+      // state is HomeStateEmpty?Icon(CupertinoIcons.delete):
+      body: SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(left: 15, right: 15, top: 20),

@@ -15,7 +15,7 @@ class SignUpPage extends StatelessWidget {
           create: (context) => RegisterCubit(),
           child: BlocBuilder<RegisterCubit, RegisterState>(
             builder: (context, state) {
-              final RegisterCubit controller = RegisterCubit();
+              final RegisterCubit controller = context.read<RegisterCubit>();
               return SafeArea(
                 child: SignUpPageBody(controller: controller),
               );
