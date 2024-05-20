@@ -2,35 +2,15 @@
 
 A new Flutter project.
 
-# Flutter Authentication Form with OTP (One-Time Password)
+## Getting Started
 
-This Flutter application provides a complete authentication system with OTP-based signup, login, and password recovery. Users can register using their email or phone number, receive an OTP for verification, and securely authenticate into the app.
+This project is a starting point for a Flutter application.
 
-## Features
+A few resources to get you started if this is your first Flutter project:
 
-- Sign up with email or phone number and receive an OTP for verification.
-- Login with email or phone number using OTP-based authentication.
-- Forgot password functionality with OTP verification for password recovery.
-- Input validation for email and phone number fields.
-- Error handling for invalid input and authentication failures.
-- Secure storage of sensitive user information.
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-## Requirements
-
-- Flutter SDK: Install Flutter from the official Flutter website (https://flutter.dev).
-- Dart SDK: Flutter requires the Dart programming language. Dart SDK is included with the Flutter SDK.
-- Android Studio / Visual Studio Code: Choose your preferred IDE for Flutter development.
-
-
-
-
-## Screenshots
-![onBoarding1](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/58c6ce5d-9e1f-43f7-a96f-dfae2bd51577)
-![onBoarding2](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/ce2e1eec-1d5d-4ecf-9509-488e23bdfe57)
-![onBoarding3](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/a7a561ba-2650-46e5-89bc-8712ffe75005)
-![logIn](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/efa427f2-8927-4675-ad8d-5e68c042fa0c)
-![signup](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/f98f2c85-b42c-48bc-8153-06247a44356a)
-![forgetPassword](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/598c94e6-f812-455c-898d-4d958379a38c)
-![verifyWithNumber](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/a828f384-c628-4832-a40d-ba3ee5461351)
-![OTP](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/a4f5999e-0ee3-48b7-a2a6-ec5b42c9d83a)
-![verifyWithNumber](https://github.com/Ahmed-Osama003/Flutter-project/assets/102679746/a66e6c00-a0f3-45c4-a3e3-284eb1632dd9)
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.

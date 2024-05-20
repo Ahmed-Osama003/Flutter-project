@@ -3,6 +3,11 @@ part of 'products_cubit.dart';
 @immutable
 sealed class ProductsState {}
 
-final class ProductsStateLoaded extends ProductsState {}
-final class ProductsStateIncrease extends ProductsState {}
-final class ProductsStateDecrease  extends ProductsState {}
+class ProductsStateLoaded extends ProductsState {
+  final int counter;
+  final int total;
+
+  ProductsStateLoaded({required this.counter, required this.total});
+}
+final class ProductsStateIncreasing extends ProductsState {}
+final class ProductsStateDecreasing extends ProductsState {}

@@ -6,26 +6,24 @@ import 'package:meta/meta.dart';
 part 'products_state.dart';
 
 class ProductsCubit extends Cubit<ProductsState> {
-  ProductsCubit() : super(ProductsStateLoaded()){
-    init();
+  ProductsCubit() : super(ProductsStateLoaded(counter: 1, total: 300));
+
+  int counter = 1;
+  int total = 300;
+
+  void increaseCounter() {
+    counter++;
+    total = 300 * counter;
+    log(counter.toString());
+    emit(ProductsStateLoaded(counter: counter, total: total));
   }
 
-  int counter = 0, total = 300;
-  int x = 0;
-  void init(){
-    counter = 1;
-    emit(ProductsStateLoaded());
-  }
-  void increaseCounter(){
-    counter++;
-    x = 300 * counter;
-    log(counter.toString());
-    emit(ProductsStateIncrease());
-  }
-  void decreaseCounter(){
-    if(counter != 1) counter--;
-    x = 300 * counter;
-    log(counter.toString());
-    emit(ProductsStateDecrease());
+  void decreaseCounter() {
+    if (counter > 1) {
+      counter--;
+      total = 300 * counter;
+      log(counter.toString());
+      emit(ProductsStateLoaded(counter: counter, total: total));
+    }
   }
 }

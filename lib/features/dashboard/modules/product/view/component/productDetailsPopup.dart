@@ -26,8 +26,8 @@ class productDetailsPopup extends StatelessWidget {
   child: BlocBuilder<ProductsCubit, ProductsState>(
   builder: (context, state) {
     final ProductsCubit controller = context.read<ProductsCubit>();
-    return state is ProductsStateLoaded ?Center(child: CircularProgressIndicator()):InkWell(
-      onTap: (){
+    // return state is ProductsStateLoaded ?Center(child: CircularProgressIndicator()):InkWell(
+      return InkWell(onTap: (){
         showModalBottomSheet(
           backgroundColor: Colors.transparent,
           context: context,
@@ -136,7 +136,7 @@ class productDetailsPopup extends StatelessWidget {
                   Row(children: [
                     Text("Total Payments", style: iStyle),
                     SizedBox(width: 10),
-                    Text(controller.x.toString(),style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
+                    Text('${controller.total}',style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
 
                   ]),
                   SizedBox(height: 20),

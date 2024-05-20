@@ -23,7 +23,7 @@ class SignUpPageBody extends StatelessWidget {
       child: BlocBuilder<RegisterCubit, RegisterState>(
         builder: (context, state) {
           return state is RegisterStateLoading ?Center(child: CircularProgressIndicator()):
-          // state is RegisterStateEmpty?Center(child:Icon(CupertinoIcons.delete)):
+          state is RegisterStateEmpty?Center(child:Icon(CupertinoIcons.delete)):
           Form(
             key: controller.formKey,
             child: Column(

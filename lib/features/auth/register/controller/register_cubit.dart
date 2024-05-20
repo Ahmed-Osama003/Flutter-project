@@ -12,7 +12,7 @@ part 'register_state.dart';
 
 class RegisterCubit extends Cubit<RegisterState> {
   RegisterCubit() : super(RegisterStateLoading()){
-    // init();
+    init();
   }
 
   //signup fields controllers
@@ -47,6 +47,7 @@ class RegisterCubit extends Cubit<RegisterState> {
     emit(RegisterStateLoading());
     await repo.initDB();
     registerData = await repo.fetchRegister();
+    log(registerData.toString());
     if(registerData.isEmpty){
       emit(RegisterStateEmpty());
     }
@@ -59,6 +60,9 @@ class RegisterCubit extends Cubit<RegisterState> {
     repo.insertRegisterInfo(name, email, phone, password);
     init();
     emit(RegisterStateLoaded());
+  }
+  Future<bool> checkExist(String name){
+    return repo.checkEmailExists(name);
   }
   //
   // HomeCubit() : super(HomeStateLoading()){
