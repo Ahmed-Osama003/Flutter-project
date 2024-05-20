@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/features/dashboard/modules/home/view/pages/dashboardHome.dart';
+import 'package:ecommerceapp/features/dashboard/modules/product/view/pages/dashboardProduct.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -23,6 +24,7 @@ class dashboard extends StatelessWidget {
         onPageChanged: controller.onChangeTap,
         children: [
           dashboardHome(),
+          dashboardProduct(),
           dashboardCart(),
           dashboardFavorite(),
           dashboardProfile(),
@@ -44,8 +46,9 @@ class dashboard extends StatelessWidget {
         onTap: controller.onChangeTap,
         items: [
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Fav"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.collections), label: "BestSeller"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart), label: "Cart"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Fav"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.profile_circled), label: "Profile"),
         ],
       ),

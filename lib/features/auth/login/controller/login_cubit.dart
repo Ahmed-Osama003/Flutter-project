@@ -1,7 +1,6 @@
 import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
 part 'login_state.dart';
 
 
@@ -17,7 +16,7 @@ class LoginCubit extends Cubit<LoginState> {
 
   void onPressedLogin(BuildContext context){
     if(formKey.currentState!.validate()){
-      Navigator.pushNamed(context, 'login');
+      Navigator.pushNamed(context, 'dashboard');
     }
     else {
       log('invalid input');

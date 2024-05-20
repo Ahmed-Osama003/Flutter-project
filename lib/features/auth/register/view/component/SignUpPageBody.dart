@@ -1,7 +1,6 @@
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 import 'package:ecommerceapp/features/auth/register/view/component/SignUpPageElevatedButton.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceapp/features/auth/login/view/pages/LoginPage.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../core/utils/Decoration.dart';

@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:meta/meta.dart';
 import '../model/onBoardingModel.dart';
 part 'on_boarding_controller_state.dart';
 

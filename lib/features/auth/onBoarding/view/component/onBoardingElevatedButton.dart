@@ -1,4 +1,3 @@
-import 'package:ecommerceapp/features/auth/register/view/pages/SignUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
