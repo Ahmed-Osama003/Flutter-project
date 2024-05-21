@@ -42,12 +42,12 @@ void main() async {
                   themeMode: ParentCubit.instance.themeMode,
                   builder: DevicePreview.appBuilder,
                   useInheritedMediaQuery: true,
-                  home: dashboard(),
-                  // onGenerateRoute: myRoutes.onGenerateRoute,
-                  // onGenerateInitialRoutes: (_) =>
-                  // firstTime
-                  //     ? myRoutes.initRoutes2
-                  //     : myRoutes.initRoutes1,
+                  // home: dashboard(),
+                  onGenerateRoute: myRoutes.onGenerateRoute,
+                  onGenerateInitialRoutes: (_) =>
+                  firstTime
+                      ? myRoutes.initRoutes2
+                      : myRoutes.initRoutes1,
                 );
               },
             ),
