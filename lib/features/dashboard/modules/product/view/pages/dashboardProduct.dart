@@ -14,10 +14,10 @@ class dashboardProduct extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Product Overview"),
+        title: Text("Product Overview", style: Theme.of(context).textTheme.bodyMedium,),
         leading: BackButton(),
         backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
+        foregroundColor: Theme.of(context).badgeTheme.backgroundColor,
         elevation: 0,
         centerTitle: true,
       ),
@@ -46,16 +46,9 @@ class dashboardProduct extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         SizedBox(height: 30),
-                        Text("Warm Zipper", style: TextStyle(
-                          color: Colors.black87,
-                          fontWeight: FontWeight.w900,
-                          fontSize: 25,
-                        )),
+                        Text("Warm Zipper", style: Theme.of(context).textTheme.bodyMedium),
                         SizedBox(height: 5),
-                        Text("Hooded Jacket", style: TextStyle(
-                          color: Colors.black54,
-                          fontWeight: FontWeight.w500,
-                        ),),
+                        Text("Hooded Jacket", style:  Theme.of(context).textTheme.bodyLarge),
                       ],
                     ),
                     Text("\$300.00",style: TextStyle(
@@ -88,11 +81,7 @@ class dashboardProduct extends StatelessWidget {
                 Align(
                   alignment: Alignment.centerLeft,
                   child: Text("Cool, windy weather is on its way. Send him out\n the door in "
-                      "a jacket he wants to wear. Warm\n Zooper Hooded Jacket.", style: TextStyle(
-                    color: Colors.black54,
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
-                  ),),
+                      "a jacket he wants to wear. Warm\n Zooper Hooded Jacket.", style:  Theme.of(context).textTheme.labelLarge),
                 ),
                 SizedBox(height: 30),
                 Row(

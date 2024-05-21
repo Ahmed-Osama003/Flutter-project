@@ -110,10 +110,7 @@ class productDetailsPopup extends StatelessWidget {
                               SizedBox(width: 0),
                               Text(
                                 controller.counter.toString(),
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontWeight: FontWeight.w700,
-                                ),
+                                style: TextStyle(color: Colors.black)
                               ),
                               SizedBox(width: 5),
                               IconButton(

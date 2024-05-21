@@ -104,10 +104,7 @@ class SignUpPageBody extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Already Have an Account? ", style: TextStyle(
-                            color: Colors.black54,
-                            fontSize: 15,
-                          )),
+                          Text("Already Have an Account? ", style: Theme.of(context).textTheme.labelLarge),
                           TextButton(onPressed: () {
 
                             Navigator.pushNamed(context, 'login');

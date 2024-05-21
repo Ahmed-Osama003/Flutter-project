@@ -31,10 +31,10 @@ class dashboardCart extends StatelessWidget {
           final HomeCubit controller = context.read<HomeCubit>();
           return Scaffold(
             appBar: AppBar(
-              title: Text("cart"),
+              title: Text("cart", style:  Theme.of(context).textTheme.bodyMedium),
               leading: BackButton(),
               backgroundColor: Colors.transparent,
-              foregroundColor: Colors.black,
+              foregroundColor: Theme.of(context).badgeTheme.backgroundColor,
               elevation: 0,
               centerTitle: true,
             ),

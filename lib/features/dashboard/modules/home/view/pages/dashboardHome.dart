@@ -1,4 +1,5 @@
 import 'package:ecommerceapp/core/context_extension.dart';
+import 'package:ecommerceapp/core/cubit/parent_cubit.dart';
 import 'package:ecommerceapp/features/dashboard/modules/home/view/component/homeItemWidgetNewestProducts.dart';
 import 'package:ecommerceapp/features/dashboard/modules/product/view/pages/dashboardProduct.dart';
 import 'package:flutter/cupertino.dart';
@@ -10,11 +11,11 @@ import '../component/homeItemWidgetImage.dart';
 import '../component/homeItemWidgetTabs.dart';
 class dashboardHome extends StatelessWidget {
   // const dashboardHome({super.key});
-  List<String> tabs = ["All", "Category", "Top", "Recommended"];
-  List<String> imageList = ["lib/images/image1.jpg", "lib/images/image2.jpg", "lib/images/image3.jpg", "lib/images/image4.jpg"];
-  List<String> productTitles= ["Warm Zipper", "Knitted Woo!", "Zipper Win", "Child Win"];
-  List <String> prices = ["\$300", "\$650", "\$50", "\$100"];
-  List <String> reviews = ["54", "120", "542", "34"];
+  // List<String> tabs = ["All", "Category", "Top", "Recommended"];
+  // List<String> imageList = ["lib/images/image1.jpg", "lib/images/image2.jpg", "lib/images/image3.jpg", "lib/images/image4.jpg"];
+  // List<String> productTitles= ["Warm Zipper", "Knitted Woo!", "Zipper Win", "Child Win"];
+  // List <String> prices = ["\$300", "\$650", "\$50", "\$100"];
+  // List <String> reviews = ["54", "120", "542", "34"];
   int length1 = 4;
   @override
   Widget build(BuildContext context) {
@@ -24,9 +25,13 @@ class dashboardHome extends StatelessWidget {
   builder: (context, state) {
     final HomeCubit controller = context.read<HomeCubit>();
     return Scaffold(
-      // body: state is HomeStateLoading ?Center(child: CircularProgressIndicator()):
-      // state is HomeStateEmpty?Icon(CupertinoIcons.delete):
-      body: SingleChildScrollView(
+      body: state is HomeStateLoading ?Center(child: CircularProgressIndicator()):
+      state is HomeStateEmpty?Icon(CupertinoIcons.delete):
+      BlocProvider<ParentCubit>(
+  create: (context) => ParentCubit.instance,
+  child: BlocBuilder<ParentCubit, ParentState>(
+  builder: (context, state) {
+    return SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.only(left: 15, right: 15, top: 20),
@@ -41,7 +46,7 @@ class dashboardHome extends StatelessWidget {
                       height: 50,
                       width: context.width / 1.5,
                       decoration: BoxDecoration(
-                        color: Colors.black12.withOpacity(0.05),
+                        color: Theme.of(context).buttonTheme.colorScheme!.background,
                         borderRadius: BorderRadius.circular(10),
                         // boxShadow: [
                         //   BoxShadow(color: Colors.black12.withOpacity(0.05), blurRadius: 2, spreadRadius: 1),
@@ -57,16 +62,35 @@ class dashboardHome extends StatelessWidget {
                     ),
                     Container(
                       height: 50,
-                      width: context.width / 6,
+                      width: context.width / 4,
                       decoration: BoxDecoration(
-                        color: Colors.black12.withOpacity(0.05),
+                        // color: Theme.of(context).buttonTheme.colorScheme!.background,
                         borderRadius: BorderRadius.circular(10),
                         // boxShadow: [
                         //   BoxShadow(color: Colors.black12.withOpacity(0.05), blurRadius: 2, spreadRadius: 1),
                         // ],
                       ),
                       child: Center(
-                        child: Icon(Icons.notifications, color: Color(0xFFDB3022)),
+
+                        // child: Icon(Icons.notifications, color: Color(0xFFDB3022)),
+                        child: Row(
+                          children: [
+                            IconButton(
+                              padding: EdgeInsets.zero,
+                              icon: Icon(ParentCubit.instance.themeMode == ThemeMode.light ?Icons.sunny:Icons.nights_stay, color: Color(0xFFDB3022)),
+
+                              onPressed: () {
+                                ParentCubit.instance.changeMode();
+                              },
+                            ),
+                            IconButton(
+                              icon: Icon(Icons.language_outlined, color: Color(0xFFDB3022)),
+                              onPressed: () {
+                                ParentCubit.instance.changeLan();
+                              },
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ],
@@ -103,8 +127,9 @@ class dashboardHome extends StatelessWidget {
                 SizedBox(height: 30),
                 Align(
                   alignment: Alignment.centerLeft,
-                    child: Text("Buy Products", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-                ),
+                  // child: Text("Buy Products", style: Theme.of(context).textTheme.bodyMedium),
+                  // child: Text(ParentCubit.instance.local['item_page_title']??'', style: Theme.of(context).textTheme.bodyMedium),
+                  child: Text('item_page_title'.tr, style: context.getTheme.textTheme.bodyMedium),                ),
                 SizedBox(height: 30),
                 GridView.builder(
                   itemCount: length1,
@@ -120,7 +145,10 @@ class dashboardHome extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      );
+  },
+),
+),
     );
   },
 ),

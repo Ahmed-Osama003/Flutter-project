@@ -16,16 +16,16 @@ class homeItemWidgetTab extends StatelessWidget {
         margin: EdgeInsets.all(8),
         padding: EdgeInsets.only(left: 15, right: 15),
         decoration: BoxDecoration(
-          color: Colors.black12.withOpacity(0.05),
+          color: Theme.of(context).buttonTheme.colorScheme!.background,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Center(
           child: FittedBox(
             //tabs[index]
-            child: Text(HomeModel.tabs??"Tab", style: TextStyle(color: Colors.black38, fontWeight: FontWeight.bold, fontSize: 16)),
+            child: Text(HomeModel.tabs??"Tab", style: Theme.of(context).textTheme.bodyLarge)
+          ),
           ),
         ),
-      ),
-    );
+      );
   }
 }

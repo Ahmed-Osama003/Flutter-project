@@ -32,10 +32,10 @@ class dashboardFavorite extends StatelessWidget {
           final HomeCubit controller = context.read<HomeCubit>();
           return Scaffold(
             appBar: AppBar(
-              title: Text("favorite"),
+              title: Text("favorite", style: Theme.of(context).textTheme.bodyMedium),
               leading: BackButton(),
               backgroundColor: Colors.transparent,
-              foregroundColor: Colors.black,
+              foregroundColor: Theme.of(context).badgeTheme.backgroundColor,
               elevation: 0,
               centerTitle: true,
             ),
@@ -84,7 +84,7 @@ class dashboardFavorite extends StatelessWidget {
                     Divider(
                       height: 20,
                       thickness: 1,
-                      color: Colors.black,
+                      color: Theme.of(context).badgeTheme.backgroundColor,
                     ),
                     SizedBox(height: 20),
                   ],

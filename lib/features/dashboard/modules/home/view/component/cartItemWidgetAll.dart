@@ -50,17 +50,11 @@ class cartItemWidgetAll extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(HomeModel.productTitle ?? "Warm Zipper",
-                            style: TextStyle(
-                                color: Colors.black87,
-                                fontWeight: FontWeight.w900,
-                                fontSize: 19)),
+                            style:  Theme.of(context).textTheme.bodyLarge),
                         SizedBox(height: 10),
                         Text(
                           "Hooded Jacket",
-                          style: TextStyle(
-                            color: Colors.black26,
-                            fontSize: 16,
-                          ),
+                          style: Theme.of(context).textTheme.labelLarge
                         ),
                         SizedBox(height: 10),
                         Text(

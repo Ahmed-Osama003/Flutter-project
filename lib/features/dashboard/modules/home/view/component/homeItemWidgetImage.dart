@@ -73,17 +73,17 @@ class homeItemWidgetImage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
 
               children: [
-                Text(HomeModel.productTitle??"Warm Zipper",style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold)),
+                Text(HomeModel.productTitle??"Warm Zipper",style: Theme.of(context).textTheme.displayLarge),
                 SizedBox(height: 10),
                 SizedBox(
                   width: 120,
-                  child: Text("Designed to keep you cozy in the coldest of weather", maxLines: 7,overflow: TextOverflow.ellipsis)
+                  child: Text("Designed to keep you cozy in the coldest of weather", maxLines: 7,overflow: TextOverflow.ellipsis,style: Theme.of(context).textTheme.labelSmall,)
                 ),
                 SizedBox(height: 10),
                 Row(
                   children: [
                     Icon(Icons.star, color: Colors.amber, size: 22),
-                    Text('(' + (HomeModel.review != null ? HomeModel.review.toString() : '120') + ')'),
+                    Text('(' + (HomeModel.review != null ? HomeModel.review.toString() : '120') + ')' ,style:Theme.of(context).textTheme.labelLarge,),
                     SizedBox(width: 10),
                     // Text(HomeModel.price??"\$100",style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
                   ],

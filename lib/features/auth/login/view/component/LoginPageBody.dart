@@ -71,10 +71,7 @@ class LoginPageBody extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text("Don't Have an Account? ", style: TextStyle(
-                            color: Colors.black54,
-                            fontSize: 15,
-                          )),
+                          Text("Don't Have an Account? ", style:Theme.of(context).textTheme.labelLarge),
                           TextButton(onPressed: () {
                             Navigator.pushNamed(context, 'signup');
                           }, child: Text("Sign Up", style: TextStyle(

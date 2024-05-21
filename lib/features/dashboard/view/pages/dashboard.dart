@@ -40,12 +40,12 @@ class dashboard extends StatelessWidget {
       // ),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color(0xFFDB3022),
-        unselectedItemColor: Colors.black,
+        selectedItemColor: Theme.of(context).bottomAppBarTheme.color,
+        unselectedItemColor: Theme.of(context).bottomAppBarTheme.color,
         currentIndex: controller.pageIndex,
         onTap: controller.onChangeTap,
         items: [
-          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: "Home"),
+          BottomNavigationBarItem(icon: Icon(CupertinoIcons.home), label: "Home",),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.collections), label: "BestSeller"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.cart), label: "Cart"),
           BottomNavigationBarItem(icon: Icon(CupertinoIcons.heart), label: "Fav"),

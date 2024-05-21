@@ -72,7 +72,7 @@ class homeItemWidgetNewestProducts extends StatelessWidget {
           Row(
             children: [
               Icon(Icons.star, color: Colors.amber, size: 22),
-              Text('(' + (HomeModel.review != null ? HomeModel.review.toString() : '120') + ')'),
+              Text('(' + (HomeModel.review != null ? HomeModel.review.toString() : '120') + ')', style: Theme.of(context).textTheme.labelLarge,),
               SizedBox(width: 10),
               Text(HomeModel.price??"\$100",style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Color(0xFFDB3022))),
             ],
