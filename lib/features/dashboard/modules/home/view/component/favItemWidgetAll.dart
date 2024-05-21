@@ -30,7 +30,7 @@ class favItemWidgetAll extends StatelessWidget {
                 activeColor: Color(0xFFDB3022),
                 value: true,
                 onChanged: (val) {
-                  controller.addItemToFavorite(0, HomeModel.id??0);
+                  controller.addItemToFavorite(HomeModel.id??0, 0 );
 
                 },
               ),
