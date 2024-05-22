@@ -1,4 +1,3 @@
-import 'package:ecommerceapp/features/auth/forget/pages/OtpVerifyPage.dart';
 import 'package:flutter/material.dart';
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 class OtpPage extends StatelessWidget {
@@ -61,7 +60,7 @@ class OtpPage extends StatelessWidget {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => const OtpVerifyPage(),
+                        builder: (context) => const OtpPage(),
                       )
                   );
                 },
