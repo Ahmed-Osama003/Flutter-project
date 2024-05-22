@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:bloc/bloc.dart';
 import 'package:flutter/services.dart';
-import 'package:meta/meta.dart';
 import 'package:flutter/material.dart';
 
 part 'parent_state.dart';

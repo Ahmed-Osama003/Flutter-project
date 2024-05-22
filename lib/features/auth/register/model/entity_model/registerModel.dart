@@ -1,5 +1,4 @@
 
-import 'dart:math';
 
 class registerModel{
 

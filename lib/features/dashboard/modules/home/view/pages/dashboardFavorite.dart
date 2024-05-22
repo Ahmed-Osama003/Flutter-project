@@ -1,10 +1,7 @@
-import 'package:ecommerceapp/core/context_extension.dart';
-import 'package:ecommerceapp/features/dashboard/modules/home/view/component/cartItemWidgetAll.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../product/view/component/containerButtonModel.dart';
 import '../../controller/home_cubit.dart';
 import '../component/favItemWidgetAll.dart';
 

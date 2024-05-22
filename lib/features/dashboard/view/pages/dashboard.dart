@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../controller/dashboard_cubit.dart';
 import '../../modules/home/view/pages/dashboardCart.dart';
 import '../../modules/home/view/pages/dashboardFavorite.dart';
-import '../../modules/home/view/pages/dashboardProfile.dart';
 
 class dashboard extends StatelessWidget {
   const dashboard({super.key});

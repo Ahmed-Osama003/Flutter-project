@@ -1,7 +1,8 @@
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 import 'package:flutter/material.dart';
-import 'package:ecommerceapp/features/auth/register/pages/SignUpPage.dart';
-import 'package:ecommerceapp/features/auth/forget/pages/ForgetPasswordPage.dart';
+
+import '../../forget/view/pages/ForgetPasswordPage.dart';
+import '../../register/view/pages/SignUpPage.dart';
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
 

@@ -1,7 +1,6 @@
 import 'package:ecommerceapp/core/context_extension.dart';
 import 'package:ecommerceapp/core/cubit/parent_cubit.dart';
 import 'package:ecommerceapp/features/dashboard/modules/home/view/component/homeItemWidgetNewestProducts.dart';
-import 'package:ecommerceapp/features/dashboard/modules/product/view/pages/dashboardProduct.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -26,7 +25,7 @@ class dashboardHome extends StatelessWidget {
     final HomeCubit controller = context.read<HomeCubit>();
     return Scaffold(
       body: state is HomeStateLoading ?Center(child: CircularProgressIndicator()):
-      state is HomeStateEmpty?Icon(CupertinoIcons.delete):
+      state is HomeStateEmpty?Center(child: Icon(CupertinoIcons.delete)):
       BlocProvider<ParentCubit>(
   create: (context) => ParentCubit.instance,
   child: BlocBuilder<ParentCubit, ParentState>(

@@ -1,10 +1,8 @@
-import 'dart:developer';
 
 import 'package:ecommerceapp/features/dashboard/modules/home/model/entity_model/homeModel.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../product/view/pages/dashboardProduct.dart';
 import '../../controller/home_cubit.dart';
 
 class cartItemWidgetAll extends StatelessWidget {

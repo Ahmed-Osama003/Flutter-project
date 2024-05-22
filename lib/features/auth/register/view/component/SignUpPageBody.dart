@@ -1,6 +1,5 @@
 import 'package:ecommerceapp/core/utils/myValidation.dart';
 import 'package:ecommerceapp/features/auth/register/view/component/SignUpPageElevatedButton.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
